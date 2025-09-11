@@ -97,6 +97,32 @@ to your PKG_CONFIG_PATH environment variable.
         -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake \
         -DENABLE_TESSERACT=ON \
 
+#Camera Optimization (Critical for Low Latency)
+
+Edit camera settings via web UI:
+
+![image alt](https://github.com/MDuke235/autocarsopark/blob/e6506249d2cd1f37e075ae01bfe3f28b669f9046/Screenshot%202025-09-11%20161716.png)
+
+# Hardware Setup
+
+- USB Relay Barrier
+  
+Connect to COM3/COM4
+
+Baud: 9600
+
+Commands:
+Open: A0 01 01 A2
+
+Close: A0 01 00 A1
+
+- HID RFID Readers
+
+Must appear as keyboard devices
+
+Bind via device path 
+
+Auto-bind mode available for setup
 
 
 # UI Workflow
