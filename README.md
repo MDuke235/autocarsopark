@@ -101,7 +101,7 @@ to your PKG_CONFIG_PATH environment variable.
 
 Edit camera settings via web UI:
 
-![image alt](https://github.com/MDuke235/autocarsopark/blob/e6506249d2cd1f37e075ae01bfe3f28b669f9046/Screenshot%202025-09-11%20161716.png)
+![image alt](https://github.com/MDuke235/autocarsopark/blob/4ddb6b8e485e3801cbe990ed9bfbb4b066f3636a/Screenshot%202025-09-11%20161716.png)
 
 # Hardware Setup
 
