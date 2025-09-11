@@ -30,13 +30,13 @@ This is a production-ready automatic parking system designed for small to medium
 
 # Layer Architechture
 
-                    Presentation (QML UI)
-                             ↑
-                Application (ParkingController)
-                             ↑
-                Domain (Interfaces + Models)
-                             ↑
-        Infrastructure (DB, Camera, OCR, Barrier, Card Reader)
+                                            Presentation (QML UI)
+                                                     ↑
+                                        Application (ParkingController)
+                                                     ↑
+                                        Domain (Interfaces + Models)
+                                                     ↑
+                                Infrastructure (DB, Camera, OCR, Barrier, Card Reader)
 
 #  Technology Stack
 •	OS: Windows 10/11 (x64)
@@ -57,26 +57,27 @@ This is a production-ready automatic parking system designed for small to medium
 
 # Installation and Setup
 1.	Visual Studio Build Tools 2022:
-•	Download from the official website.
+•	Download from the [official website](https://visualstudio.microsoft.com/free-developer-offers/).
 
 •	During installation, select the "Desktop development with C++" workload.
 
 •	Ensure "MSVC v143 - VS 2022 C++ x64/x86 build tools" and a Windows SDK are selected.
 
 2. Qt 6:
+Download on [Qt Website](https://www.qt.io/download-open-source).
 Use the Qt Maintenance Tool to install a Qt 6 version for MSVC 2022 64-bit.
 
-3. GStreamer
-•	Download and install both the Runtime and Development MSVC 64-bit packages from the GStreamer website.
+4. GStreamer
+•	Download and install both the Runtime and Development MSVC 64-bit packages from the [GStreamer website](https://gstreamer.freedesktop.org/download).
 
 •	Install both to the same directory.
 
 •	Add the GStreamer bin directory to your system's PATH environment variable.
 
-•	Add the GStreamer 
+•	Add the GStreamer directory 
 
     lib\pkgconfig 
-directory to your PKG_CONFIG_PATH environment variable.
+to your PKG_CONFIG_PATH environment variable.
 
 4.	Tesseract OCR:
 •	The recommended way is to install via vcpkg: 
@@ -86,7 +87,7 @@ directory to your PKG_CONFIG_PATH environment variable.
 •	Ensure you have the required language data files (e.g., eng.traineddata, vie.traineddata) in a tessdata directory.
 
 5.	ONNX Runtime:
-•	Download the latest pre-built binary from the ONNX Runtime GitHub releases.
+•	Download the latest pre-built binary from the [ONNX Runtime GitHub releases](https://github.com/microsoft/onnxruntime/releases).
 
 •	Extract it and place it in the lib directory of the project.
 
@@ -95,6 +96,8 @@ directory to your PKG_CONFIG_PATH environment variable.
         cmake -B build -S . \
         -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake \
         -DENABLE_TESSERACT=ON \
+
+
 
 # UI Workflow
  - Entrance Mode (Default)
@@ -114,7 +117,6 @@ directory to your PKG_CONFIG_PATH environment variable.
 7.	Updates UI: plate, time, card ID
 
 - Exit Mode
-
  
 1.	Driver scans RFID card
 
@@ -162,6 +164,7 @@ Mark lost cards
 
         ENABLE_TESSERACT=ON — Enable OCR
         HAVE_ONNXRUNTIME=ON — Enable YOLO detection
+  
 - Extensibility
 
 Add new card readers by implementing ICardReader
