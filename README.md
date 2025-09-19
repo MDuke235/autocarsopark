@@ -109,7 +109,7 @@ Edit camera settings via web UI:
   
 Connect to COM3/COM4
 
-Baud: 9600
+Baud: 9600 and adjustable
 
 Commands:
 Open: A0 01 01 A2
